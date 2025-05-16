@@ -6,8 +6,24 @@
     <title>Document</title>
 </head>
 <body>
+    
     Texto no HTML<br/>
     <script src="script.js">
     </script>
+
+    <img src="ladybug.png"
+    onMouseOver="mostrarCarrinhoVazio(this)"
+    onMouseOut="mostrarCarrinhoCheio(this)" />
+    <script src="trocarImagem.js">
+    </script>
+
+    <form>
+        letra maiúcula: <br/>
+        <textarea name="letra" onKeyUp="maiuscula(this)">
+        </textarea>
+    </form>
+    <script src="trocarLetra.js">
+    </script>
+    
 </body>
 </html>
