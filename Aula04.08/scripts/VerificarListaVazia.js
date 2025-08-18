@@ -6,7 +6,7 @@ function verificarListaVazia(listaDeCompras){
     //Se nn houver nenhum <li> na lista (lista vazia)
     if (itensDaLista.length === 0){
         //exibe mensagem de lista vazia
-        mensagemListaVazia.style.display = 'black';
+        mensagemListaVazia.style.display = 'block';
     }else {
         // 'none' Esconde a mensagem
         mensagemListaVazia.style.display = 'none';
@@ -15,3 +15,4 @@ function verificarListaVazia(listaDeCompras){
 
 //Exporta a fuhnção para ser usada em outro arquivo js
 export default verificarListaVazia;
+
