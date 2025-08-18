@@ -26,6 +26,7 @@ botaoAdicionar.addEventListener("click", (evento) => {
 });
 
 // Faz uma verificação inicial se a lista está vazia ao carregar a página
-verificarListaVazia(listaDeCompras);
+//verificarListaVazia(listaDeCompras);
+
 
 
