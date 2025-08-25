@@ -1,7 +1,7 @@
 function gerarDiaDaSemana(){
     //Manipula data e hora
     const diaDaSemana = new Date().toLocaleDateString('pt-br', {
-        weekday: long
+        weekday: "long"
     });
 
     const hora = new Date().toLocaleTimeString('pt-br', {
@@ -16,3 +16,4 @@ function gerarDiaDaSemana(){
 }
 
 export default gerarDiaDaSemana;
+
