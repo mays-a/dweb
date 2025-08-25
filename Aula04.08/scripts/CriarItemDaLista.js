@@ -1,3 +1,6 @@
+import gerarDiaDaSemana from "./GerarDiaDaSemana.js"
+import verificarListaVazia from "./VerificarListaVazia.js";
+
 export const inputItem = document.getElementById('input-item');
 let contador = 0;
 export function criarItemDaLista(){
@@ -45,11 +48,21 @@ export function criarItemDaLista(){
         }
     });
 
-    
     containerItemDaLista.appendChild(nomeItem);
     itemDaLista.appendChild(containerItemDaLista);
+
+    //gerar dia da semana
+    const dataCompleta = gerarDiaDaSemana();
+    //<p>
+    const itemData = document.createElement('p');
+    itemData.innerText= dataCompleta;
+    itemData.classList.add('texto-data');
+
+    itemDaLista.appendChild(itemData);
+    
     return itemDaLista;
 }
+
 
 
 
