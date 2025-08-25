@@ -17,9 +17,39 @@ export function criarItemDaLista(){
     containerItemDaLista.appendChild(inputCheckBox);
     
     nomeItem.innerText = inputItem.value;
+
+
+    //Cria um elemento <button>
+    const botao = document.createElement("button");
+    botao.classList.add('botao-excluir');
+    
+    //Cria um elemento "icone"
+    const iconeExcluir = document.createElement('i');
+    iconeExcluir.className = 'bi bi-trash3';
+    
+    //add uma 'mãozinha' com a sobreposicao do mouse
+    botao.style.cursor = 'pointer';
+    
+    //add o botão e o ícone excluir dentro do container da...
+    containerItemDaLista.appendChild(botao);
+    //Add o icone dentro do botão
+    botao.appendChild(iconeExcluir);
+
+    botao.addEventListener('click', function (){
+        const confirmacao = confirm('Deseja realmente deletar esse item?');
+
+        if(confirmacao){
+            itemDaLista.remove();
+            alert('Item deletado');
+            verificarListaVazia(listaDeCompras);
+        }
+    });
+
+    
     containerItemDaLista.appendChild(nomeItem);
     itemDaLista.appendChild(containerItemDaLista);
     return itemDaLista;
 }
+
 
 
